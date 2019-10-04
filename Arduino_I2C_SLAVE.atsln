@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Arduino_I2C_SLAVE", "Arduino_I2C_SLAVE.cppproj", "{23E20DA5-9BF8-4AC7-B2DA-FDEFBAABEC26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23E20DA5-9BF8-4AC7-B2DA-FDEFBAABEC26}.Debug|AVR.ActiveCfg = Debug|AVR
+		{23E20DA5-9BF8-4AC7-B2DA-FDEFBAABEC26}.Debug|AVR.Build.0 = Debug|AVR
+		{23E20DA5-9BF8-4AC7-B2DA-FDEFBAABEC26}.Release|AVR.ActiveCfg = Release|AVR
+		{23E20DA5-9BF8-4AC7-B2DA-FDEFBAABEC26}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

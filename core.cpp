@@ -5,7 +5,10 @@
  *      Author: educampos
  */
 
-
+#include "avr_config.h"
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "I2CSLAVE.h"
@@ -20,7 +23,8 @@
 #define Adrress 0x08
 
 uint8_t status=0xFF;
-int coord[4] = {};
+uint8_t coord[] = {};
+uint8_t a = 0;
 
 ISR(TWI_vect)
 {
@@ -32,12 +36,22 @@ ISR(TWI_vect)
 // This function define how to deal with the information received from the master
 void I2C_recv()
 {	
-	for(int i=0;i<4;i++){
-		coord[i] = TWDR;
-	};
-	USART.write(">");
-	USART.write(TWDR);
-	USART.write("\n\r");
+	/*
+	std::vector<uint8_t> coord;
+	coord.push_back(1);
+	USART.write(coord[8]);
+	*/
+	uint8_t val = TWDR;
+	uint8_t *valor = &val;
+	
+	USART.writeByte(*valor);
+	
+	if(*valor == 1){
+		USART.write("\n");
+	}
+	else{
+		USART.write(" ");
+	}	
 	
 	/*
 	USART.write(">");

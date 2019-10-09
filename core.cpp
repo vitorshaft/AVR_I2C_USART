@@ -25,7 +25,7 @@
 
 uint8_t status=0xFF;
 uint8_t coord[8] = {};
-int i = 0;
+int ind = 0;
 
 ISR(TWI_vect)
 {
@@ -38,77 +38,27 @@ ISR(TWI_vect)
 void I2C_recv()
 {	
 	/*
-	std::vector<uint8_t> coord;
-	coord.push_back(1);
-	USART.write(coord[8]);
-	
-	lista = [1,2,3,4]
-	lista.append(valor)
-	*/
-	//char val[15] = TWDR;
-	/*
-	
-	USART.writeByte(*valor);
-	
-	if(*valor == 1){
-		USART.write("\n");
-	}
-	else{
-		USART.write(" ");
-	}	
-	
-	for(int i=0;i<8;i++){
-		USART
-	}*/
-	/*
-	for(int i=0;i<15;i++){
-		coord[i] = TWDR;
-		USART.write(coord[i]);
-		USART.write("\n\r");
-	}
-	*/
-	/*
-	if(TWDR == 1){
-		USART.write(coord[0]);
-		USART.write("\n\r");
-		USART.write(coord[1]);
-		USART.write("\n\r");
-		USART.write(coord[2]);
-		USART.write("\n\r");
-		USART.write(coord[3]);
-		USART.write("\n\r");
-		i=0;
-	}
-	
-	else{
-		coord[i] = TWDR;
-		USART.write(i);
-		USART.write("\n\r");		
-		i+=1;
-	}
-	*/
-	
-	//USART.write(">");
-	//USART.write(TWD0);
-	//USART.write("\n\r");
-	/*
-	while(!TWCR){
-		coord[i] = TWDR;
-		i++;
-	}
-	*/
-	if(TWSR == 0x80){
-		coord[i] = TWDR;
-		USART.write(i);
+	if(TWSR == 0x80){	//Configuracao do TWSR
+		coord[ind] = TWDR;	//Armazena primeiro "caractere" no array coord[]
+		USART.write(ind);
 		USART.write(": ");
-		USART.write(coord[i]);
+		USART.write(coord[ind]);
 		USART.write("\n\r");
-		i++;
-		//Quando o i extrapola o limite da array ele para de atualizar coord[]
-		//A transmissao via USART esta comecando em i = 1 e nao i = 0
+		ind++;
+		//Quando o ind extrapola o limite da array ele para de atualizar coord[]
+		//A transmissao via USART esta comecando em ind = 1 e nao i = 0
 	}
 	else{
-		i=0;
+		ind=0;
+	}*/
+	//for(int i=1;i<=8;i++){
+		coord[ind] = TWDR;
+		ind++;		
+		if(ind == 8) ind = 0;
+	//}
+	for(int i=0;i < 8;i++){
+		USART.write(coord[i]);
+		USART.write("\n");
 	}
 	
 }

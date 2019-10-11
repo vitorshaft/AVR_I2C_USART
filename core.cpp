@@ -24,8 +24,10 @@
 #define TWACK (TWCR=(1<<TWINT)|(1<<TWEN)|(1<<TWEA))
 
 uint8_t status=0xFF;
-uint8_t coord[8] = {};
+uint8_t coord[9] = {};
 int ind = 0;
+int soma;
+int divisor = 15;
 
 ISR(TWI_vect)
 {
@@ -53,13 +55,29 @@ void I2C_recv()
 	}*/
 	//for(int i=1;i<=8;i++){
 		coord[ind] = TWDR;
-		ind++;		
-		if(ind == 8) ind = 0;
+		ind++;	
+		if(ind == 9) {
+			
+			for(int a=0;a<8;a++){
+				soma+=coord[a];
+			}
+			ind = 0;			
+		}
 	//}
-	for(int i=0;i < 8;i++){
-		USART.write(coord[i]);
+	int resultado = soma%divisor;
+	if(resultado == coord[8]){
+		for(int i=0;i < 8;i++){
+			USART.write(coord[i]);
+			USART.write("\n");
+		}
+	}
+	else{
+		coord[9] = NULL;
+		USART.write("DEU RUIM!\n");
+		USART.write(resultado);
 		USART.write("\n");
 	}
+	
 	
 }
 

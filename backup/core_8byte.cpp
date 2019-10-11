@@ -21,14 +21,13 @@
 
 
 #define Adrress 0x08
-#define BUFF_SIZE 16 
-#define DIVISOR 16
-//#define TWACK (TWCR=(1<<TWINT)|(1<<TWEN)|(1<<TWEA))
+#define TWACK (TWCR=(1<<TWINT)|(1<<TWEN)|(1<<TWEA))
 
 uint8_t status=0xFF;
-uint8_t coord[BUFF_SIZE] = {};
+uint8_t coord[9] = {};
 int ind = 0;
 int soma;
+int divisor = 15;
 
 ISR(TWI_vect)
 {
@@ -55,30 +54,28 @@ void I2C_recv()
 		ind=0;
 	}*/
 	//for(int i=1;i<=8;i++){
-		coord[ind] = TWDR;		//Armazena byte na posicao ind (variando de 0 a 15)
-		ind++;					//Incrementa ind
-		if(ind == BUFF_SIZE) {			//Se após incrementar, ind = 16:
+		coord[ind] = TWDR;
+		ind++;	
+		if(ind == 9) {
 			
-			for(int a=0;a<15;a++){	//Soma os elementos de coord[0:14]
+			for(int a=0;a<8;a++){
 				soma+=coord[a];
 			}
-			ind = 0;			//Reinicia ind			
+			ind = 0;			
 		}
 	//}
-	int resultado = soma%DIVISOR;//Resultado eh o resto da divisao soma/divisor
-	if(resultado == coord[15]){	//Se o resultado for o ultimo byte (coord[16]):
-		for(int i=0;i < 15;i++){
-			USART.write(coord[i]);//Envia elementos de coord separados por linha via USART
+	int resultado = soma%divisor;
+	if(resultado == coord[8]){
+		for(int i=0;i < 8;i++){
+			USART.write(coord[i]);
 			USART.write("\n");
 		}
 	}
-	else{						//Se o resultado for diferente do ultimo byte:
-		coord[BUFF_SIZE] = {};		//Zera o array
-		USART.write("ERRO DE CHECKSUM!\n");//Envia na USART a msg de erro
-		USART.write(resultado);		//Envia resultado do checksum
-		USART.write(" != ");
-		USART.write(coord[15]);		
-		USART.write("\n");			//pula linha
+	else{
+		coord[9] = NULL;
+		USART.write("DEU RUIM!\n");
+		USART.write(resultado);
+		USART.write("\n");
 	}
 	
 	

@@ -24,17 +24,18 @@ void setup() {
 byte lat[] = {8,3,15,1};  //08 03 15 S
 byte lon[] = {34,52,53,1}; //034 52 53 W
 */
-int coord[] = {8,3,15,1,34,52,53,1};  //08 03 15 S/034 52 53 W
-//8,3,15,1,34,52,53,1,7(167/16)
+int coord[16] = {8,3,15,1,34,52,53,1,15,46,48,1,47,55,45};
+//08 03 15 S/034 52 53 W (Recife) 15 46 48 S/047 55 45 W (Brasilia)
+//8,3,15,1,34,52,53,1,15,46,48,1,47,55,45,<8>checksum(424/16)
 void loop() {
-  for (int a=0;a<8;a++){
+  for (int a=0;a<15;a++){
     //coord[a] = coord[a]+1;
     soma+=coord[a];
   };
   soma = soma%divisor;
-  coord[8] = soma;
+  coord[15] = 8; //soma; //Insert checksum to the end of array
   Wire.beginTransmission(8); // transmit to device #8
-  for (int i=0; i<9; i++){
+  for (int i=0; i<16; i++){
     Wire.write(coord[i]);
   };
   

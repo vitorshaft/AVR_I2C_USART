@@ -18,38 +18,27 @@
 int soma = 0;
 int divisor = 16;
 void setup() {
+  //Serial.begin(9600);
   Wire.begin(); // join i2c bus (address optional for master)
 }
-/*
-byte lat[] = {8,3,15,1};  //08 03 15 S
-byte lon[] = {34,52,53,1}; //034 52 53 W
-*/
+
 int coord[16] = {8,3,15,1,34,52,53,1,15,46,48,1,47,55,45};
 //08 03 15 S/034 52 53 W (Recife) 15 46 48 S/047 55 45 W (Brasilia)
 //8,3,15,1,34,52,53,1,15,46,48,1,47,55,45,<8>checksum(424/16)
 void loop() {
+  soma = 0;
   for (int a=0;a<15;a++){
     //coord[a] = coord[a]+1;
     soma+=coord[a];
   };
   soma = soma%divisor;
-  coord[15] = 8; //soma; //Insert checksum to the end of array
+  coord[15] = soma; //Insert checksum to the end of array
   Wire.beginTransmission(8); // transmit to device #8
   for (int i=0; i<16; i++){
     Wire.write(coord[i]);
+    //Serial.println(coord[i]);
   };
   
-  
-  //Wire.write("x is ");        // sends five bytes
-  /*String str = "abc";
-  for(char& c : str) {
-    Wire.write(c);
-  };
-  */
-  //Wire.write(x);              // sends one byte
-  //x++;
-  //delay(500);
-  //Wire.write(y);
   Wire.endTransmission();    // stop transmitting
   delay(500);
 }

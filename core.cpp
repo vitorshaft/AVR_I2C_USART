@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <avr/io.h>
+#include <avr/sleep.h>
 #include <avr/interrupt.h>
 #include "I2CSLAVE.h"
 //#include "Usart.hrt.hw...................er.hUsart........h" // deve usar a opção -std=gnu++11
@@ -89,15 +90,18 @@ void setup() {
 
 
 void loop() {
-
-//	if (status != 0xFF)
-//	{
-//	USART.write("=");
-//	USART.write(status);
-//	USART.write("\n\r");
-//	status=0xff;
-//	}
-
+	//Teste de sleep (25/10/19)
+	
+	set_sleep_mode(SLEEP_MODE_STANDBY);
+    sei();
+    sleep_mode();
+	
+	/*
+	set_sleep_mode(SLEEP_MODE_STANDBY);
+    sleep_enable();
+    sei();
+    sleep_cpu();
+	*/
 }
 
 

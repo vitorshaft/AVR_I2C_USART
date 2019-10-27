@@ -40,5 +40,5 @@ void loop() {
   };
   
   Wire.endTransmission();    // stop transmitting
-  delay(500);
+  delay(5000);
 }

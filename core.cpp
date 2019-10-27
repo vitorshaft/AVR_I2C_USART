@@ -14,6 +14,8 @@
 #include <avr/io.h>
 #include <avr/sleep.h>
 #include <avr/interrupt.h>
+//#include <util/delay.h>	//modificada para "delay.hpp"
+#include "delay.hpp"
 #include "I2CSLAVE.h"
 //#include "Usart.hrt.hw...................er.hUsart........h" // deve usar a opção -std=gnu++11
 #include "Usart.h"
@@ -95,6 +97,7 @@ void loop() {
 	set_sleep_mode(SLEEP_MODE_STANDBY);
     sei();
     sleep_mode();
+	_delay_ms(2000);
 	
 	/*
 	set_sleep_mode(SLEEP_MODE_STANDBY);

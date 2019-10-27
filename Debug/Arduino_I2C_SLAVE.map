@@ -144,7 +144,7 @@ LOAD c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.2
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x12fe
+.text           0x00000000     0x132c
  *(.vectors)
  .vectors       0x00000000       0x68 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vector_default
@@ -231,101 +231,101 @@ LOAD c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.2
                 0x000000c0                __vector_16
                 0x000000c0                __vector_18
                 0x000000c0                __vector_20
- .text          0x000000c4      0x1ca core.o
+ .text          0x000000c4      0x1f8 core.o
                 0x000000c4                I2C_Request()
                 0x000000d4                I2C_recv()
                 0x000001f2                __vector_24
                 0x0000023a                setup()
                 0x00000286                loop()
-                0x00000288                main
- .text          0x0000028e        0x0 core_BackUp.o
- .text          0x0000028e      0x14a I2CSLAVE.o
-                0x0000028e                I2CSLAVE::~I2CSLAVE()
-                0x0000028e                I2CSLAVE::~I2CSLAVE()
-                0x000002cc                I2CSLAVE::~I2CSLAVE()
-                0x000002e2                Slave_CallBack()
-                0x0000038c                I2CSLAVE::Open(unsigned char)
-                0x0000039e                I2CSLAVE::attach_Receive(void (*)())
-                0x000003a6                I2CSLAVE::attach_Request(void (*)())
-                0x000003ae                I2CSLAVE::I2C_stop()
- .text          0x000003d8      0xb62 Usart.o
-                0x000003d8                Usart::~Usart()
-                0x000003d8                Usart::~Usart()
-                0x000003e4                Usart::setFrameLength(UsartFrameLengthEL)
-                0x00000588                Usart::getFrameLength()
-                0x00000622                Usart::setParity(UsartParityEL)
-                0x000006c8                Usart::getParity()
-                0x00000722                Usart::setStopBit(UsartStopBitEL)
-                0x0000076e                Usart::Usart(unsigned char)
-                0x0000076e                Usart::Usart(unsigned char)
-                0x00000826                Usart::getStopBit()
-                0x0000085a                Usart::available()
-                0x00000866                Usart::clear()
-                0x000008e4                Usart::getMaxLength()
-                0x000008ec                Usart::getRxLostBytesNr()
-                0x000008f8                Usart::begin(unsigned long, unsigned int, UsartModeEL)
-                0x00000ae4                Usart::read(bool)
-                0x00000b3e                Usart::writeByte(unsigned char)
-                0x00000b64                Usart::writeFromPM(char const*)
-                0x00000b94                Usart::writeBytes(unsigned char*, unsigned int)
-                0x00000bda                Usart::write(char const*)
-                0x00000c04                Usart::write(unsigned long)
-                0x00000cc0                Usart::write(long)
-                0x00000cf4                Usart::write(int)
-                0x00000d06                Usart::write(unsigned int)
-                0x00000d12                Usart::find(char const*, bool)
-                0x00000da0                Usart::findFromPM(char const*, bool)
-                0x00000e2e                rxVector(unsigned char, Usart)
-                0x00000e92                USART0_RX_vect
- .text          0x00000f3a       0xa6 Util.o
-                0x00000f3a                operator new(unsigned int)
-                0x00000f40                operator delete(void*)
-                0x00000f46                getFreeMCUMemory()
-                0x00000f7c                getPMData(char const*, unsigned int)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_divmodhi4.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_udivmodsi4.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_exit.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_copy_data.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_clear_bss.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_ctors.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_dtors.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_udivmodhi4.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_tablejump.o)
- .text          0x00000fe0        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x00000fe0                . = ALIGN (0x2)
+                0x000002b2                main
+ .text          0x000002bc        0x0 core_BackUp.o
+ .text          0x000002bc      0x14a I2CSLAVE.o
+                0x000002bc                I2CSLAVE::~I2CSLAVE()
+                0x000002bc                I2CSLAVE::~I2CSLAVE()
+                0x000002fa                I2CSLAVE::~I2CSLAVE()
+                0x00000310                Slave_CallBack()
+                0x000003ba                I2CSLAVE::Open(unsigned char)
+                0x000003cc                I2CSLAVE::attach_Receive(void (*)())
+                0x000003d4                I2CSLAVE::attach_Request(void (*)())
+                0x000003dc                I2CSLAVE::I2C_stop()
+ .text          0x00000406      0xb62 Usart.o
+                0x00000406                Usart::~Usart()
+                0x00000406                Usart::~Usart()
+                0x00000412                Usart::setFrameLength(UsartFrameLengthEL)
+                0x000005b6                Usart::getFrameLength()
+                0x00000650                Usart::setParity(UsartParityEL)
+                0x000006f6                Usart::getParity()
+                0x00000750                Usart::setStopBit(UsartStopBitEL)
+                0x0000079c                Usart::Usart(unsigned char)
+                0x0000079c                Usart::Usart(unsigned char)
+                0x00000854                Usart::getStopBit()
+                0x00000888                Usart::available()
+                0x00000894                Usart::clear()
+                0x00000912                Usart::getMaxLength()
+                0x0000091a                Usart::getRxLostBytesNr()
+                0x00000926                Usart::begin(unsigned long, unsigned int, UsartModeEL)
+                0x00000b12                Usart::read(bool)
+                0x00000b6c                Usart::writeByte(unsigned char)
+                0x00000b92                Usart::writeFromPM(char const*)
+                0x00000bc2                Usart::writeBytes(unsigned char*, unsigned int)
+                0x00000c08                Usart::write(char const*)
+                0x00000c32                Usart::write(unsigned long)
+                0x00000cee                Usart::write(long)
+                0x00000d22                Usart::write(int)
+                0x00000d34                Usart::write(unsigned int)
+                0x00000d40                Usart::find(char const*, bool)
+                0x00000dce                Usart::findFromPM(char const*, bool)
+                0x00000e5c                rxVector(unsigned char, Usart)
+                0x00000ec0                USART0_RX_vect
+ .text          0x00000f68       0xa6 Util.o
+                0x00000f68                operator new(unsigned int)
+                0x00000f6e                operator delete(void*)
+                0x00000f74                getFreeMCUMemory()
+                0x00000faa                getPMData(char const*, unsigned int)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_divmodhi4.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_exit.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_copy_data.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_clear_bss.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_ctors.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_dtors.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_tablejump.o)
+ .text          0x0000100e        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x0000100e                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x00000fe0       0x26 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_divmodhi4.o)
-                0x00000fe0                _div
-                0x00000fe0                __divmodhi4
- .text.libgcc   0x00001006       0x44 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_udivmodsi4.o)
-                0x00001006                __udivmodsi4
- .text.libgcc   0x0000104a        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000104a        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000104a        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000104a        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_ctors.o)
- .text.libgcc   0x0000104a        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_dtors.o)
- .text.libgcc   0x0000104a       0x28 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_udivmodhi4.o)
-                0x0000104a                __udivmodhi4
- .text.libgcc   0x00001072        0xc c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_tablejump.o)
-                0x00001072                __tablejump2__
-                0x00001076                __tablejump__
+ .text.libgcc   0x0000100e       0x26 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_divmodhi4.o)
+                0x0000100e                _div
+                0x0000100e                __divmodhi4
+ .text.libgcc   0x00001034       0x44 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_udivmodsi4.o)
+                0x00001034                __udivmodsi4
+ .text.libgcc   0x00001078        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00001078        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001078        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00001078        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_ctors.o)
+ .text.libgcc   0x00001078        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_dtors.o)
+ .text.libgcc   0x00001078       0x28 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_udivmodhi4.o)
+                0x00001078                __udivmodhi4
+ .text.libgcc   0x000010a0        0xc c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_tablejump.o)
+                0x000010a0                __tablejump2__
+                0x000010a4                __tablejump__
  .text.avr-libc
-                0x0000107e      0x266 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x0000107e                malloc
-                0x000011b2                free
-                0x000012e4                . = ALIGN (0x2)
+                0x000010ac      0x266 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x000010ac                malloc
+                0x000011e0                free
+                0x00001312                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000012e4        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_exit.o)
-                0x000012e4                _exit
-                0x000012e4                exit
+ .fini9         0x00001312        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_exit.o)
+                0x00001312                _exit
+                0x00001312                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
  *(.fini7)
  *(.fini7)
  *(.fini6)
- .fini6         0x000012e4       0x16 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_dtors.o)
-                0x000012e4                __do_global_dtors
+ .fini6         0x00001312       0x16 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_dtors.o)
+                0x00001312                __do_global_dtors
  *(.fini6)
  *(.fini5)
  *(.fini5)
@@ -338,11 +338,11 @@ LOAD c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.2
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000012fa        0x4 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_exit.o)
+ .fini0         0x00001328        0x4 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000012fe                _etext = .
+                0x0000132c                _etext = .
 
-.data           0x00800100       0x2a load address 0x000012fe
+.data           0x00800100       0x2a load address 0x0000132c
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.27/avrtoolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
@@ -405,8 +405,8 @@ LOAD c:/program files (x86)/atmel/avr studio 5.1/extensions/atmel/avrgcc/3.3.1.2
                 0x00800173                __brkval
                 0x00800175                __flp
                 0x00800177                PROVIDE (__bss_end, .)
-                0x000012fe                __data_load_start = LOADADDR (.data)
-                0x00001328                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000132c                __data_load_start = LOADADDR (.data)
+                0x00001356                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800177        0x0
                 0x00800177                PROVIDE (__noinit_start, .)

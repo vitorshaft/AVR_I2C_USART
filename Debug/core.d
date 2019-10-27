@@ -15,7 +15,11 @@ core.d core.o: .././core.cpp .././avr_config.h \
  c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/version.h \
  c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/fuse.h \
  c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/lock.h \
+ c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/sleep.h \
  c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/interrupt.h \
+ .././delay.hpp \
+ c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h \
+ c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/math.h \
  .././I2CSLAVE.h .././Usart.h .././Util.h \
  c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/pgmspace.h
 
@@ -53,7 +57,15 @@ c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27
 
 c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/lock.h:
 
+c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/sleep.h:
+
 c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/avr/interrupt.h:
+
+.././delay.hpp:
+
+c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h:
+
+c:\program\ files\ (x86)\atmel\avr\ studio\ 5.1\extensions\atmel\avrgcc\3.3.1.27\avrtoolchain\bin\../lib/gcc/avr/4.5.1/../../../../avr/include/math.h:
 
 .././I2CSLAVE.h:
 
